@@ -1,0 +1,79 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+a {
+    text-decoration: none;
+    color: #000;
+
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Headers y Navegacion */
+
+.nombre-sitio {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.nombre-sitio span {
+    color: #037bc0;
+}
+
+.contenedor-navegacion {
+    border-top: 1px solid #e1e1e1;
+}
+
+.nav-principal {
+    padding: 20px 0; /* Esto aplica tambien para margin y te puedes ahorrar lineas de codigo css*/
+    display: flex; /* para activar las propiedades de flexbox*/
+    justify-content: space-between;
+    
+}
+
+.hero { /* Siempre se debe dar propiedades a la imagen para que se muestre*/
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+
+}
+
+/* Lista de categorias*/
+.categorias h2{
+    text-align: center;
+}
+.categoria a{
+    text-align: center;
+    display: block;
+    padding: 20px;
+   font-size: 20px;
+}
+
+.categoria a:hover{
+    background-color: #1482db;
+    color: #fff;
+    margin: 3px
+}
+
+.listado-categorias{
+    display: grid; /* para activar las propiedades de grid*/
+    grid-template-columns: repeat(3, 1fr);
+   gap: 20px; /* para dar una separacio entre objetos*/
+   }

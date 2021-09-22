@@ -4,52 +4,76 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Inicio</title>
+        <title>Ecommerce - Home</title>
+        <link rel="stylesheet" href="css/normalize.css">
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
             crossorigin="anonymous"
             />
+        <link rel="stylesheet" href="css/app.css">
     </head>
 
     <body>
         <header>
-            <h1>Tienda de Muebles</h1>
+            <h1 class="nombre-sitio">Tienda <span> Muebles </span></h1>
         </header>
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="tienda.html">Tienda</a>
-            <a href="blog.html">Blog</a>
-            <a href="galeria.html">galeria</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+        <div class="contenedor-navegacion">
+            <nav class="nav-principal contenedor">
+                <a class="enlace" href="index.html">Inicio</a>
+                <a class="enlace" href="nosotros.html">Nosotros</a>
+                <a class="enlace" href="tienda.html">Tienda</a>
+                <a class="enlace" href="blog.html">Blog</a>
+                <a class="enlace" href="galeria.html">galeria</a>
+                <a class="enlace" href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+        <div class="hero"></div>
 
-        <section>
-            <h2>Categorias de Productos</h2>
+        <section class="contenedor categorias">
+            <h2>Categorias de <span> Productos </span></h2>
 
+
+            <div class="listado-categorias">
+                <div class="categoria">
+                    <img src="img/categoria1.jpg" alt="Imagen Categoria" />
+                    <!-- "Los atributos son:" = src = source: ubicacion de la image alt=""-->
+                    <a href="#">Oficina</a>
+                </div>
+
+                <div class="categoria">
+                    <img src="img/categoria2.jpg" alt="Imagen Categoria" />
+                    <!-- "Los atributos son:" = src = source: ubicacion de la image alt=""-->
+                    <a href="#">Hogar</a>
+                </div>
+
+                <div class="categoria">
+                    <img src="img/categoria3.jpg" alt="Imagen Categoria" />
+                    <!-- "Los atributos son:" = src = source: ubicacion de la image alt=""-->
+                    <a href="#">Cocina</a>
+                </div>
+                
+            </div>    
+        </section>
+
+        <section class="sobre-nosotros">
             <div>
-                <img src="img/categoria1.jpg" alt="Imagen Categoria" />
-                <!-- "Los atributos son:" = src = source: ubicacion de la image alt=""-->
-                <a href="#">Oficina</a>
-            </div>
-
-            <div>
-                <img src="img/categoria2.jpg" alt="Imagen Categoria" />
-                <!-- "Los atributos son:" = src = source: ubicacion de la image alt=""-->
-                <a href="#">Hogar</a>
-            </div>
-
-            <div>
-                <img src="img/categoria3.jpg" alt="Imagen Categoria" />
-                <!-- "Los atributos son:" = src = source: ubicacion de la image alt=""-->
-                <a href="#">Cocina</a>
+                <h2>Sobre Nosotros</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Facilis sit
+                    porro animi voluptatem soluta cupiditate maxime esse, et
+                    provident
+                    accusamus voluptate assumenda, quis fugiat, voluptatibus
+                    sequi debitis
+                    molestiae nam laborum.
+                </p>
             </div>
         </section>
 
-        <section>
+        <section class="sobre-empresa">
             <div>
                 <h2>Sobre Nosotros</h2>
                 <p>
@@ -189,7 +213,7 @@
             <div>
                 <h3>Categorias</h3>
                 <nav>
-                    <a href="#">Cocina</a>
+                    <a class="enlace" href="#">Cocina</a>
                     <a href="#">Oficina</a>
                     <a href="#">Jardin</a>
                     <a href="#">Cochera</a>
@@ -199,7 +223,7 @@
 
             <div>
                 <h3>Sobre Nosotros</h3>
-                <nav>
+                <nav class="navegacion">
 
                     <a href="#">Nuestra Historia</a>
                     <a href="#">Mision, Vision y valores</a>

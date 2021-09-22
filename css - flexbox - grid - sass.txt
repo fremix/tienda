@@ -1,0 +1,92 @@
+//
+
+Formatos de imagenes
+
+<img> es la mas comu
+<figure> soporta multiples formatos
+
+// Estructurar el html
+
+Identificar las diferentes partes de la pagina web
+
+1.- <header> parte superior de un sitio web o un elemento
+2.- <nav> grupo de enlaces o navegacion
+
+***
+
+3.- <main> contenido principal de un archivo .html - se usa uno por archivo
+4.- <section> section debe estar dentro de main
+5.- <aside> el contenido que acompaña al principal
+
+***
+
+6.- <footer> parte inferior de un sitio web o un elemento
+7.- <div> cuando ninguno de los anteriores se puede utilizar
+
+*** Especificidad ***
+Cuando dos selecctores tiene el mismo parametro, se aplica el ultimo
+/* Se cumple la regla de especificidad, el selector esta mejor definido a pesar de estar en una linea antes*/
+
+Para hablar de especificidad se tiene que conocer las classes e ids
+Ambos se definen via atributos html con class y id.
+
+La class tiene como caracteristica que soporta 1 o mas, tambien se puede reitulizar.
+
+Los ID'S solo se puede asignar una por Elemento HTML y tambien solo se debe utilizar 1 vez por documento, (No se pueden duplicar)
+Sin son dos palabras deben de ir separadas por un guion medio, ej. freddy-morales.
+
+******
+
+/* Se cumple la regla de especificidad, el selector esta mejor definido a pesar de estar en una linea antes*/
+/*
+nav a {
+    text-transform: uppercase; Forma muy general
+}*/
+/*
+.navegacion a {
+    text-transform: lowercase; Con especificidad es la mas recomendad por se mas ligera
+}*/
+/* 
+#navegacion a {
+    text-transform: capitalize; Con mas especificidad pero es mas pesada, tiene la prioridad mas alta, 
+    sin embargo se recomienda mas usas classes
+}
+
+.navegacion {
+
+}
+
+.enlace {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color:#037bc0 ;
+*************************
+
+// Estilos para escribir CSS
+
+1.- Modulos
+2.- BEM
+3.- SMACSS
+
+/** Box Model**/
+
+En CSS todo es una caja y depende de 4 cosas: (pregunta de examen)
+1.- Contenido
+2.- Padding o relleno
+3.- Borde, y
+4.- Margen
+
+/** Margin y Padding**/
+Margin: toma distancia de la orilla hacia afuera
+Padding: toma distancia de la orilla hacia adentro
+
+/** Display **/
+
+Existen tres tipos
+
+1.- Block: un elemento se colocara debajo del otro sin importar su tamaña o que tanto contenido tiene
+2.- Inline: El elemento se posicionara a la deracha una vez haya tomado el espacio que requiere: no se le puede aplicar ancho ni altura: se le puede poner widht y haight
+3.- Inline-block: Permite darle un width, haight, margin a un elemento inline, lo cual no es posible hacerlo en un elemento de este tipo: se le puede poner widht y haight
+
+
