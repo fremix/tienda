@@ -1,79 +1,293 @@
+/* Debe ir en todos los proyectos: html, box-sizing, body*/
 html {
-    box-sizing: border-box;
+  box-sizing: border-box; /* Para cuando agreguemos un width y despues añadamos un padding no se modifique el tamaño de ese elemento*/
+  font-size: 62.5%; /* 1 REM = 10px*/
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-/* Globales */
-a {
-    text-decoration: none;
-    color: #000;
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
 
+/* Globales: son elementos que aplican a todo el proyecto */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0 0 5rem 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
+  display: block; /* Para que la imagen cubra todo el espacio disponible*/
+}
+
+.btn {
+  background-color: #8cbc00;
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  transition: background-color 0.3s ease-out;
+}
+
+.btn:hover {
+  background-color: #769c02;
+}
+
+/* Utilidades */
+
+.text-center {
+  text-align: center;
 }
 
 /* Headers y Navegacion */
-
 .nombre-sitio {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    text-align: center;
+  margin-top: 5rem;
+  text-align: center;
 }
 
 .nombre-sitio span {
-    color: #037bc0;
+  color: #037bc0;
 }
 
 .contenedor-navegacion {
-    border-top: 1px solid #e1e1e1;
+  border-top: 0.1rem solid #e1e1e1;
 }
 
 .nav-principal {
-    padding: 20px 0; /* Esto aplica tambien para margin y te puedes ahorrar lineas de codigo css*/
-    display: flex; /* para activar las propiedades de flexbox*/
-    justify-content: space-between;
-    
+  padding: 2rem 0; /* Esto aplica tambien para margin y te puedes ahorrar lineas de codigo css*/
+  display: flex; /* para activar las propiedades de flexbox*/
+  justify-content: space-between;
 }
 
-.hero { /* Siempre se debe dar propiedades a la imagen para que se muestre*/
-    background-image: url(../img/principal.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 550px;
-
+.hero {
+  /* Siempre se debe dar propiedades a la imagen para que se muestre*/
+  background-image: url(../img/principal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 55rem;
 }
 
 /* Lista de categorias*/
-.categorias h2{
-    text-align: center;
-}
-.categoria a{
-    text-align: center;
-    display: block;
-    padding: 20px;
-   font-size: 20px;
+.categorias {
+  padding-top: 3rem;
 }
 
-.categoria a:hover{
-    background-color: #1482db;
-    color: #fff;
-    margin: 3px
+.categorias h2 {
+  text-align: center;
+}
+.categoria a {
+  text-align: center;
+  display: block; /* Se le tiene que poner un display: block ya que por defualt tiene un display: inline */
+  /*margin-top: 3px;*/
+  padding: 2rem;
+  font-size: 2rem;
 }
 
-.listado-categorias{
-    display: grid; /* para activar las propiedades de grid*/
-    grid-template-columns: repeat(3, 1fr);
-   gap: 20px; /* para dar una separacio entre objetos*/
-   }
+.categoria a:hover {
+  background-color: #037bc0;
+  color: #fff;
+  border-bottom-right-radius: 1rem;
+}
+
+.listado-categorias {
+  display: grid; /* para activar las propiedades de grid*/
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* para dar una separacio entre objetos*/
+}
+
+/* Bloque Nosotros*/
+
+.sobre-nosotros {
+  background-image: linear-gradient(
+      to right,
+      transparent 50%,
+      #037bc0 50%,
+      #037bc0 100%
+    ),
+    url(../img/nosotros.jpg);
+  background-position: left center;
+  padding: 10rem 0;
+  background-repeat: no-repeat;
+  background-size: 100%, 120rem; /* Dividir con una coma, ya que aplica para el gradiente y el otro para la imagen*/
+  margin-top: 2rem; /* Provisinal */
+}
+/* Otra forma de hacerlo es con GRID
+.sobre-nosotros-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  column-gap: 8rem;
+}
+
+.texto-nosotros {
+  grid-column: 2/ 3;
+}
+*/
+
+/* Otra forma de hacerlo es con FLEXBOX */
+.sobre-nosotros-grid {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.texto-nosotros {
+  flex-basis: 50%;
+  padding-left: 10rem;
+  color: #fff;
+}
+
+/* Lista de productos */
+.contenido-principal {
+  padding-top: 5rem;
+}
+
+.listado-productos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem; /* Una sola linea para el espaciado entre filas y columnas */
+  /*column-gap: 2rem;  Para el espaciado entre columnas*/
+  /*row-gap: 2rem;  Para el espaciado entre filas*/
+}
+
+.producto:nth-child(1) {
+  /*grid-column: 1 / 7;   La forma mas corta, pero es lo mismo que lo de abajo*/
+  grid-column-start: 1;
+  grid-column-end: 7;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img {
+  height: 52rem;
+  width: 100%;
+  object-fit: cover; /* Para ajustar las imagenes a un tamaño ideal dentro del grid*/
+}
+
+.producto:nth-child(2) {
+  grid-column: 1 / 4;
+  /*grid-column-start: 1;
+  grid-column-end: 4; */
+}
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.producto:nth-child(3) {
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+
+/*
+.producto:nth-child(3) img { es lo mismo que los de arriba, se puede aplicar a una imagen, video
+  height: 30rem;             se define altura y ancho para que se vez bien
+  width: 100%;
+  object-fit: cover;
+}
+*/
+
+.producto:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.producto:nth-child(5) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.producto:nth-child(6) {
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+
+.producto {
+  background-color: #037bc0;
+}
+
+.texto-producto {
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.texto-producto h3 {
+  margin: 0;
+}
+
+.texto-producto p {
+  margin: 0 0 0.5rem 0;
+}
+
+.texto-producto .precio {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+
+/* Footer **/
+
+.site-footer {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 5rem;
+  padding-top: 5rem;
+}
+
+.site-footer h3 {
+  margin-bottom: 0.5rem; /* para ajustar el margen de la parte inferior*/
+}
+
+.grid-footer {
+  /* para crear las columnas */
+  display: grid; /* puede ser flexbox o grid*/
+  grid-template-columns: repeat(3, 1fr); /* Para crear las columnas con grid*/
+  gap: 2rem; /* Para darle separacion a las columnas*/
+}
+/*
+.grid-footer div { 
+  flex: 1;
+}   otra forma para que las columnas tomen un tamaña equitativo
+*/
+
+.footer-menu a {
+  display: block;
+}
+
+.copyright {
+  margin-top: 5rem;
+  text-align: center;
+}
