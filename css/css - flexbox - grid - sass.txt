@@ -90,3 +90,8 @@ Existen tres tipos
 3.- Inline-block: Permite darle un width, haight, margin a un elemento inline, lo cual no es posible hacerlo en un elemento de este tipo: se le puede poner widht y haight
 
 
+/** Etequtes extras **/
+
+1.- Value
+2.- fielset
+3.- Legent

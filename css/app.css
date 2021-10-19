@@ -60,10 +60,12 @@ img {
   padding: 1rem;
   transition: background-color 0.3s ease-out;
   text-align: center;
+  border: none;
 }
 
 .btn:hover {
   background-color: #769c02;
+  cursor: pointer;
 }
 
 /* Utilidades */
@@ -295,14 +297,13 @@ img {
 .copyright {
   margin-top: 5rem;
   text-align: center;
-  margin-bottom: .2rem;
-  
+  margin-bottom: 0.2rem;
 }
 
 .dev {
   text-align: center;
   font-size: 2rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 /* Nosotros **/
@@ -310,9 +311,8 @@ img {
 .contenido-nosotros {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-columns: repeat(auto-fit, minmax( 25rem, 1fr ) );
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   column-gap: 4rem;
-
 }
 
 .informacion-nosotros {
@@ -320,7 +320,6 @@ img {
   flex-direction: column;
   justify-content: center;
   text-align: justify;
-
 }
 
 /* Blog */
@@ -376,5 +375,44 @@ img {
   height: 40rem;
   width: 40rem;
   object-fit: cover;
+}
 
+/* Formulario */
+
+.formulario {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.formulario fieldset {
+  border: 1px solid black;
+  margin-bottom: 2rem;
+}
+
+.formulario legend {
+  background-color: #005485;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo label {
+  flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]), /* Omitor un campo y dejar activos los demas*/
+.campo textarea, 
+.campo select {
+  flex: 1;
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
 }
