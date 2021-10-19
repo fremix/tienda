@@ -337,6 +337,7 @@ img {
   border-bottom: 2px solid #e1e1e1;
   padding-bottom: 4rem;
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .entrada:last-of-type {
